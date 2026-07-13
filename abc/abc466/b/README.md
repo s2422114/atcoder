@@ -1,6 +1,8 @@
 # ABC466 B - Representative Balls
 
 - URL: https://atcoder.jp/contests/abc466/tasks/abc466_b
+- 復習: 要（初見で解けなかった。ans[c[i]] の入れ子が出てこなかった）
+- 復習日: 未
 - 結果: AC（初見では解けず、ヒントあり）
 - 解法: 色番号を配列の添字にして、色ごとの最大サイズを保持
   - ans を -1 で初期化 → ボールが来なかった色は -1 のまま残る
