@@ -1,28 +1,18 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <algorithm>
 using namespace std;
 
 int main() {
-  int N, A;
-  cin >> N >> A;
+  int x, y, l, r, a, b;
+  cin >> x >> y >> l >> r >> a >> b;
 
-  for (int i = 0; i < N; i++) {
-    string op;
-    int B;
-    cin >> op >> B;
-    if (op == "+") {
-      A += B;  
-    } else if (op == "-") {
-      A -= B; 
-    } else if (op == "*") {
-      A *= B;
-    } else if (op == "/") {
-      if (B == 0) {
-        cout << "error" << endl;
-        break;
-      } else {
-        A /= B;
-      }
-    }
-    cout << i+1 << ":" << A << endl;
+  int total = b - a;
+
+  int high = min(b, r) - max(a, l);
+  if (high < 0) { // 重ならない
+    high = 0;
   }
+  int low = total - high;
+
+  cout << high * x + low * y << endl;
 }
