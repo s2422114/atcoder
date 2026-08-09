@@ -42,7 +42,7 @@ int main() {
             S[i][j] = S[i - 1][j] + S[i][j];
         }
     }
-
+    
     for (int i = 1; i <= Q; i++) {
         cout << S[c[i]][d[i]] + S[a[i] - 1][b[i] - 1] - S[a[i] - 1][d[i]] - S[c[i]][b[i] - 1] << endl;
     }
