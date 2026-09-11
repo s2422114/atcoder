@@ -17,7 +17,7 @@ int main() {
 
     cin >> N;
     for (int i = 2; i <= N; i++) cin >> A[i];
-    for (int i = 3; i <= N; i++) cin >> A[i];
+    for (int i = 3; i <= N; i++) cin >> B[i];
 
     //dp
     dp[1] = 0;
