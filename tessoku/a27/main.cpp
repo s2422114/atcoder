@@ -12,15 +12,21 @@
 using namespace std;
 
 int GCD(int A, int B) {
-    int ret = 0;
-    for (int x = 1; x <= min(A, B); x++) {
-        if (A % x == 0 && B % x == 0) ret = x;
+    while (A >= 1 && B >= 1) {
+        if (A >= B) {
+            A = (A % B);
+        } 
+        else {
+            B = (B % A);
+        }
     }
-    return ret;
+    if (A != 0) return A;
+    return B;
 }
 
 int main() {
-    int X, Y;
-    cin >> X >> Y;
-    cout << GCD(X, Y) << endl;
+    int A, B;
+    cin >> A >> B;
+    cout << GCD(A, B) << endl;
+    return 0;
 }
